@@ -5,7 +5,7 @@ import Footer from '../Footer'
 export default function MainLayout({children}) {
     return (
         <div>
-            <NavBar/> 
+            {/* <NavBar/>  */}
             <div className="container">
                 {children}
                 <div>cái này đâu</div>

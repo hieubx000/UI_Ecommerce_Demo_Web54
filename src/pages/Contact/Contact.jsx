@@ -1,11 +1,11 @@
 import React from 'react'
-import NavBar from '../../components/NavBar'
+import { MainLayout } from '../../components/Layout'
+
 
 export default function Contact() {
     return (
-        <div>
-            <NavBar/>
+        <MainLayout>
             Contact
-        </div>
+        </MainLayout>
     )
 }

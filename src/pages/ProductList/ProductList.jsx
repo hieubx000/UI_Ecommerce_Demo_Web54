@@ -1,11 +1,11 @@
 import React from 'react'
-import NavBar from '../../components/NavBar'
+import { MainLayout } from '../../components/Layout'
+
 
 export default function ProductList() {
     return (
-        <div>
-            <NavBar/>
-            ProductList
-        </div>
+        <MainLayout>
+            Product List
+        </MainLayout>
     )
 }
