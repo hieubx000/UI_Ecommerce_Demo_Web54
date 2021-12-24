@@ -1,53 +1,53 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import logo from "../../assets/images/logo.jpeg"
+// import logo from "../../assets/images/logo.jpeg"
 import Grid from '../../components/Grid'
 import request from '../../api/request'
 
-const footerAboutLinks = [
+const footerIntroduce = [
     {
-        display: "Về chúng tôi",
-        path: "/ve-chung-toi"
+        display: "Giới thiệu",
+        path: "/"
     },
     {
-        display: "Hướng dẫn mua hàng",
-        path: "/huong-dan-mua-hang"
+        display: "Tuyển dụng",
+        path: "/"
     },
     {
-        display: "Hướng dẫn thanh toán",
-        path: "/huong-dan-thanh-toan"
+        display: "Liên hệ hợp tác",
+        path: "/"
     },
     {
-        display: "Hướng dẫn trả góp",
-        path: "/huong-dan-tra-gop"
+        display: "Góp ý",
+        path: "/"
     },
     {
-        display: "Chính sách vận chuyển",
-        path: "/chinh-sach-van-chuyen"
-    },
-    {
-        display: "Chính sách bảo hành",
-        path: "/chinh-sach-bao-hanh"
-    },
-    {
-        display: "Chính sách đổi trả hàng",
-        path: "/chinh-sach-doi-tra-hang"
-    },
-    {
-        display: "Cam kết bảo mật thông tin",
-        path: "/cam-ket-bao-mat-thong-tin"
-    },
-    {
-        display: "Tuyển cộng tác viên toàn quốc",
-        path: "/tuyen-cong-tac-vien-toan-quoc"
+        display: "Blogs công nghệ",
+        path: "/"
     },
 
 ]
 
-const footerCustomLink = [
+const footerCustomerSupport = [
     {
-        display: "Tuyển cộng tác viên toàn quốc",
-        path: "/tuyen-cong-tac-vien-toan-quoc"
+        display: "Hướng dẫn mua trả góp",
+        path: "/"
+    },
+    {
+        display: "Trung tâm bảo hành",
+        path: "/"
+    },
+    {
+        display: "Chính sách bảo hành",
+        path: "/"
+    },
+    {
+        display: "Thứ 2 - thứ 7: 8h - 22h",
+        path: "/"
+    },
+    {
+        display: "CN & ngày lễ: 9h - 18h",
+        path: "/"
     },
 ]
 
@@ -91,9 +91,9 @@ export default function Footer() {
         return(
             <div className="footer__content">
                 {category.map((cate) => (
-                    <div key={cate._id}>
+                    <p key={cate._id}>
                         {cate.name}
-                    </div>
+                    </p>
                 ))
                 }
             </div>
@@ -111,13 +111,61 @@ export default function Footer() {
                         gap={10}
                     >
                         <div>
-                            <div className="footer_title">
+                            <div className="footer__title">
                                 Danh mục kinh doanh
                             </div>
-                            <div>
+                            <>
                                 {renderCategory()}
+                            </>
+                        </div>
+                        <div>
+                            <div className="footer__title">
+                                GIỚI THIỆU VỀ SETUP STORE
+                            </div>
+                            <div className='footer__content'>
+                                {
+                                    footerIntroduce.map((item,idx) => (
+                                        <p key={idx}>
+                                            <Link to={item.path}>
+                                               {item.display}
+                                            </Link>
+                                        </p>
+                                    ))
+                                }
                             </div>
                         </div>
+                        <div>
+                            <div className="footer__title">
+                                HỖ TRỢ KHÁCH HÀNG
+                            </div>
+                            <div className='footer__content'>
+                                {
+                                    footerCustomerSupport.map((item,idx) => (
+                                        <p key={idx}>
+                                            <Link to={item.path}>
+                                               {item.display}
+                                            </Link>
+                                        </p>
+                                    ))
+                                }
+                            </div>
+                        </div>
+                        <div>
+                        <div className="footer__title">
+                            LIÊN HỆ TRỰC TIẾP
+                        </div>
+                        <div className="footer__content">
+                            <p>
+                                Tổng đài CSKH <strong>0123456789</strong>
+                            </p>
+                            <p>
+                                Thắc mắc đơn hàng <strong>0123456789</strong>
+                            </p>
+                            <p>
+                                Góp ý, khiếu nại <strong>setupstore@gmail.com</strong>
+                            </p>
+                        </div>
+                    </div>
                     </Grid>
                 </div>
             </footer>

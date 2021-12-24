@@ -1,0 +1,7 @@
+.product {
+    flex-direction: row;
+    @include flex(flex-start, flex-start);
+    @include mobile {
+        flex-direction: column;
+    }
+}

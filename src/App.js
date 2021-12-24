@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-// import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './assets/boxicons/css/boxicons.min.css'
 import './sass/index.scss'
 import Home from "./pages/Home";

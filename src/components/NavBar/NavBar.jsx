@@ -23,18 +23,18 @@ export default function NavBar() {
     const activeNav = mainNav.findIndex(e => e.path === pathName)
     const navRef = React.useRef(null)
 
-    React.useEffect(() =>{
-        window.addEventListener("scroll",() =>{
-            if(document.body.scrollTop>80 || document.documentElement.scrollTop >80){
-                navRef.current.classList.add("shrink")
-            } else{
-                navRef.current.classList.remove("shrink")
-            }
-        })
-        return () => {
-            window.removeEventListener("scroll")
-        }
-    }, [])
+    // React.useEffect(() =>{
+    //     window.addEventListener("scroll",() =>{
+    //         if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
+    //             navRef.current.classList.add('shrink')
+    //         } else{
+    //             navRef.current.classList.remove('shrink')
+    //         }
+    //     })
+    //     return () => {
+    //         window.removeEventListener("scroll")
+    //     }
+    // }, [])
 
     const menuLeft = React.useRef(null);
     const menuToggle = () => menuLeft.current.classList.toggle('active')
