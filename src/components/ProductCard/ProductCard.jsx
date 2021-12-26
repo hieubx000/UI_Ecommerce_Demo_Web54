@@ -10,9 +10,12 @@ export default function ProductCard({slug,imageUrl, name, price}) {
                     <img src={imageUrl} alt="" />
                 </div>
                 <h3 className="productCard__name">{name}</h3>
-                <div className="productCard__price">{price+" đ"}</div>
             </Link>
+            
             <div className="productCard__button">
+                <Link to={`/product/${slug}`}>
+                    <div className="productCard__price">{price+" đ"}</div>
+                </Link>
                 <Button
                     size='sm'
                     icon="bx bx-cart"

@@ -1,12 +1,12 @@
 import { Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'antd/dist/antd.css';
 import './assets/boxicons/css/boxicons.min.css'
 import './sass/index.scss'
 import Home from "./pages/Home";
 import ProductList from './pages/ProductList';
 import ProductDetail from './pages/ProductDetail';
 import Contact from './pages/Contact'
-
 
 function App() {
   return (

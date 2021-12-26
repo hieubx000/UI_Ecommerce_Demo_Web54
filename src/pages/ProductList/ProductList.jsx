@@ -1,8 +1,7 @@
 import React from 'react'
-import { MainLayout } from '../../components/Layout'
+import {ProductLayout } from '../../components/Layout'
 import ProductCard from '../../components/ProductCard/ProductCard'
 import request from '../../api/request'
-import Pagination from '../../components/Pagination'
 import Grid from '../../components/Grid'
 import Helmet from '../../components/Helmet/Helmet'
 
@@ -58,7 +57,7 @@ export default function ProductList() {
         if (status === "idle" || status === "loading") return <div>Loading...</div>;
     
         return(
-            <div>
+            <>
                 {
                    product.map((product) => (
                        <ProductCard
@@ -70,16 +69,16 @@ export default function ProductList() {
                        />
                    )) 
                 }
-            </div>
+            </>
         )
     }
 
     return (
-        <MainLayout>
+        <ProductLayout>
             <Helmet title='Sản phẩm'>
                 <div className="product">
                     <div className="product__sidebar"></div>
-                    <div className="product__item">
+                    <div className="product__content">
                         <Grid
                             col={4}
                             mdCol={2}
@@ -98,6 +97,6 @@ export default function ProductList() {
                     /> */}
                 </div>
             </Helmet>
-        </MainLayout>
+        </ProductLayout>
     )
 }

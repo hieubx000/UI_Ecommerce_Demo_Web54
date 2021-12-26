@@ -10,6 +10,9 @@
 
 html {
     font-size: 13px;
+    @include mobile {
+        font-size: 11px;
+    }
 }
 
 body {
@@ -20,15 +23,13 @@ ul {
     list-style-type: none;
 }
 
-a {
-    text-decoration: none;
-    color: unset;
-}
-
-a:hover {
-    color: $main-color;
-}
-
+// a {
+//     text-decoration: none;
+//     color: unset;
+// }
+// a:hover {
+//     color: $main-color;
+// }
 img {
     max-width: 100%;
 }
